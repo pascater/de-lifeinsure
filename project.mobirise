@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "privacy.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "inspirem5",
       "title": "InspireM5",
@@ -84,7 +84,7 @@
       "rejectText": "REJECT"
     },
     "pwa-switcher": false,
-    "publishChangesOnly": false,
+    "publishChangesOnly": true,
     "mcSmartCart": {
       "currency": "USD"
     },
