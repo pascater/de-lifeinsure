@@ -1034,7 +1034,7 @@
 
             <div class="col-lg-6 my-auto pb-4 mbr-form" data-form-type="formoid">
 <!--Formbuilder Form-->
-<form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form di PolizzaVita.io"><input type="hidden" name="email" data-form-email="true" value="moshjwF3aCir4SFkKEWhQdLOptCauYqP/pJ6M+V085Izi5a/D37Ai2UzUuJE3i5I51zpBcUoqkA+pua3snIdMziwoyWBfS6cxCmeQdf6XV/irNIHQg5d+RHp76jYMEPc.nbg2HDN9hpX9NCwDmfK3SXonDOOPk4D69r8jfinlATmZyBCs5UCLkLnrMklKSfq/KV6dMSvgsHNF0qNzPDPLEj45gfc2IxFORNWxBgO5Nwz0ImY/65af1E4BT9nREOku">
+<form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form di PolizzaVita.io"><input type="hidden" name="email" data-form-email="true" value="opec3CdKeWGPDUNrYM+VrBbAPJJ5JyKlKEzF6HSmYh1MT4oklo6mPkzE8JmlbnwOaZspIT+suxtRwUUAN3YeghzDHHRQEuBcXDwpxMgvRDEG0YJfdp0wxCv/X0saTnOB.ScwuULuRf3GlfAzc9jiC50cIRbgufJVL7BnOq+4dsc8L747kfGx+c90ghDN7uDx6bXxy/yxUSv1VGPCtElCojzb/+oT4qCL6C68STW5mCOr7ixS81TwxDJxkRSHGdMSE">
 <div class="row">
 <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Danke für deine Nachricht. Wir melden uns in Kürze bei dir zurück.</div>
 <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some problem!</div>
@@ -1129,6 +1129,130 @@
             </div>
         </div>
     </div>
+
+<div id="custom-html-3h"><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie-Einstellungen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            z-index: 1000;
+        }
+        .cookie-banner button {
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .accept {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .reject {
+            background-color: #f44336;
+            color: white;
+        }
+        .settings {
+            background-color: #008CBA;
+            color: white;
+        }
+        .cookie-settings {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            text-align: center;
+            z-index: 1001;
+        }
+        .cookie-settings button {
+            margin-top: 10px;
+        }
+        .cookie-icon {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            cursor: pointer;
+            z-index: 1002;
+            font-size: 20px;
+        }
+    </style>
+
+
+    <div class="cookie-banner" id="cookieBanner">
+        Diese Website verwendet Cookies, um deine Benutzererfahrung zu verbessern. <br>
+        <button class="settings" onclick="showSettings()">Personalisiere</button>
+        <button class="reject" onclick="setCookiePreferences(false)">Ablehnen</button>
+        <button class="accept" onclick="setCookiePreferences(true)">Akzeptieren</button>
+    
+        <br>
+        <a href="cookie.html" target="_blank">Lies unsere Datenschutzrichtlinie</a>
+    </div>
+
+    <div class="cookie-settings" id="cookieSettings">
+        <h2>Preferenze Cookie</h2>
+        <label><input type="checkbox" id="essentialCookies" checked="" disabled=""> Essentielle Cookies (erforderlich)</label><br>
+        <label><input type="checkbox" id="performanceCookies"> Performance- und Analysecookies</label><br>
+        <label><input type="checkbox" id="marketingCookies"> Marketing- und Tracking-Cookies</label><br>
+        <button class="accept" onclick="savePreferences()">Einstellungen speichern</button>
+    </div>
+
+    <div class="cookie-icon" id="cookieIcon" onclick="showSettings()">
+        🍪
+    </div>
+
+    <script>
+        function setCookiePreferences(accepted) {
+            localStorage.setItem("cookieAccepted", accepted);
+            document.getElementById("cookieBanner").style.display = "none";
+            document.getElementById("cookieIcon").style.display = "flex";
+        }
+        
+        function showSettings() {
+            document.getElementById("cookieSettings").style.display = "block";
+        }
+        
+        function savePreferences() {
+            let performance = document.getElementById("performanceCookies").checked;
+            let marketing = document.getElementById("marketingCookies").checked;
+            localStorage.setItem("performanceCookies", performance);
+            localStorage.setItem("marketingCookies", marketing);
+            document.getElementById("cookieSettings").style.display = "none";
+        }
+        
+        window.onload = function() {
+            if (localStorage.getItem("cookieAccepted") !== null) {
+                document.getElementById("cookieBanner").style.display = "none";
+                document.getElementById("cookieIcon").style.display = "flex";
+            } else {
+                document.getElementById("cookieIcon").style.display = "none";
+            }
+        }
+    </script></div>
 
 
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
