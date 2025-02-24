@@ -1,6 +1,6 @@
 {
   "settings": {
-    "currentPage": "index.html",
+    "currentPage": "terms-and-conditions.html",
     "theme": {
       "name": "inspirem5",
       "title": "InspireM5",
@@ -26,7 +26,7 @@
         "isGhostButtonBorder": true,
         "underlinedLinks": false,
         "isAnimatedOnScroll": true,
-        "isScrollToTopButton": true
+        "isScrollToTopButton": false
       },
       "titlePreset": "Counseling Expert",
       "nameSelectPreset": "counseling-expert",
@@ -66,7 +66,7 @@
     "lazyLoad": true,
     "site_lang": "de",
     "favicon": false,
-    "mbrsiteDomain": "w2qq1a3mcr",
+    "mbrsiteDomain": "oy6xr4vecu",
     "usedWebp": false,
     "cssOptimize": false,
     "pwa-switcher": false,
